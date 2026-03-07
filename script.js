@@ -9,6 +9,7 @@ const MOVIES = [
   { id: 7, title: "Furiosa: A Mad Max Saga", year: 2024, match: "95% Match", genre: "Action / Sci-Fi", duration: "2h 28m", cast: "Anya Taylor-Joy, Chris Hemsworth", poster: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=600&auto=format&fit=crop", backdrop: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2000&auto=format&fit=crop", desc: "The origin story of renegade warrior Furiosa before her encounter and teamup with Mad Max in 'Fury Road'.", serverUrl: "https://www.youtube.com/embed/XJMuhwVlca4" },
   { id: 1, title: "yacine: Folie à Deux", year: 2024, match: "98% Match", genre: "Crime / Drama", duration: "2h 18m", cast: "Joaquin Phoenix, Lady Gaga", poster: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=600&auto=format&fit=crop", backdrop: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=2000&auto=format&fit=crop", desc: "Arthur Fleck is institutionalized at Arkham awaiting trial for his crimes as Joker. While struggling with his dual identity, Arthur not only stumbles upon true love, but also finds the music that's always been inside him.", serverUrl: "https://firebasestorage.googleapis.com/v0/b/mtvmusalsal.appspot.com/o/16%2F4%2FBir_Gece_Masali_S01E07.mp4?alt=media&token=7e582411-7acd-4abd-88cd-77f65ae9406a" },
   { id: 8, title: "Top Gun: Maverick", year: 2022, match: "98% Match", genre: "Action / Drama", duration: "2h 10m", cast: "Tom Cruise, Miles Teller", poster: "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=600&auto=format&fit=crop", backdrop: "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2000&auto=format&fit=crop", desc: "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past.", serverUrl: "https://www.youtube.com/embed/giXcoGa8nzo" },
+  { id: 8, title: "Top Gun: Maverick", year: 2022, match: "98% Match", genre: "Action / Drama", duration: "2h 10m", cast: "Tom Cruise, Miles Teller", poster: "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=600&auto=format&fit=crop", backdrop: "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2000&auto=format&fit=crop", desc: "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past.", serverUrl: "https://www.youtube.com/embed/giXcoGa8nzo" },
 ];
 
 const SERIES = [
@@ -287,3 +288,4 @@ function showToast(msg) {
     setTimeout(() => { toast.style.opacity = '0'; }, 2500);
   }
 }
+
