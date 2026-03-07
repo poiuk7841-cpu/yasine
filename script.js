@@ -60,67 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return false;
     }
   }
-
-  // 5. Search Functionality
-  const searchTrigger = document.getElementById('searchTrigger');
-  const searchBox = document.getElementById('searchBox');
-  const searchInput = document.getElementById('searchInput');
-
-  if (searchTrigger && searchBox && searchInput) {
-    searchTrigger.onclick = () => {
-      searchBox.classList.toggle('active');
-      if (searchBox.classList.contains('active')) {
-        searchInput.focus();
-      } else {
-        searchInput.value = '';
-        handleSearch('');
-      }
-    };
-
-    searchInput.oninput = (e) => {
-      handleSearch(e.target.value);
-    };
-  }
 });
-
-function handleSearch(query) {
-  const searchResultsSection = document.getElementById('searchResultsSection');
-  const searchGrid = document.getElementById('searchGrid');
-  const searchResultTitle = document.getElementById('searchResultTitle');
-  const body = document.body;
-
-  if (!searchResultsSection || !searchGrid || !searchResultTitle) return;
-
-  if (!query.trim()) {
-    searchResultsSection.style.display = 'none';
-    body.classList.remove('searching');
-    return;
-  }
-
-  body.classList.add('searching');
-  searchResultsSection.style.display = 'block';
-  searchGrid.innerHTML = '';
-
-  const allContent = [...MOVIES, ...SERIES];
-  // Remove duplicates from allContent if any (movie with id 1 is duplicated in the data)
-  const uniqueContent = Array.from(new Set(allContent.map(a => a.id)))
-    .map(id => {
-      return allContent.find(a => a.id === id);
-    });
-
-  const filtered = uniqueContent.filter(item =>
-    item.title.toLowerCase().includes(query.toLowerCase()) ||
-    item.genre.toLowerCase().includes(query.toLowerCase()) ||
-    (item.cast && item.cast.toLowerCase().includes(query.toLowerCase()))
-  );
-
-  if (filtered.length > 0) {
-    searchResultTitle.innerText = `Results for "${query}"`;
-    renderRow('searchGrid', filtered);
-  } else {
-    searchResultTitle.innerText = `No results found for "${query}"`;
-  }
-}
 
 function renderRow(containerId, data) {
   const container = document.getElementById(containerId);
