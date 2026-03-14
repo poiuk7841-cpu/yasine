@@ -13,6 +13,17 @@
 
   <!-- Monetag Ad Script -->
   <script src="https://quge5.com/88/tag.min.js" data-zone="217317" async data-cfasync="false"></script>
+
+  <!-- OneSignal Push Notifications Script -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "f3f0db9c-ae93-4786-92d2-4f2df4f5e860", /* الكود ديالك ديال OneSignal */
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -152,7 +163,4 @@
   <script src="script.js"></script>
 </body>
 
-
 </html>
-
-
