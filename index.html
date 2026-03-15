@@ -645,6 +645,8 @@ background-size: cover;
     await OneSignal.init({
       appId: "5f601e57-0e35-481d-ae70-b0c4bbcad85d",
     });
+    // هاد السطر كيفرض على المتصفح يطلع النافذة الأصلية (Native Prompt)
+    OneSignal.Notifications.requestPermission();
   });
 </script>
 
