@@ -215,6 +215,16 @@
         }
     </style>
 </script>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "8d136015-373e-44d6-a04d-080ca8697c7c",
+    });
+  OneSignal.Notifications.requestPermission();
+  });
+</script>
 </head>
 <body>
 
